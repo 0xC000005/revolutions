@@ -1,5 +1,6 @@
 # Revolution
 ![Repin_17October](https://github.com/social-ai-uoft/revolutions/assets/29427196/3488423c-29a9-4f8a-970b-ac9fd299a92e)
+![Image_20240908163948](https://github.com/user-attachments/assets/c50309d7-4df5-4247-b50c-662d37d0d6d0)
 
 
 **Changelog**
