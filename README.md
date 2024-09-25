@@ -56,6 +56,51 @@ classDiagram
     PPO --> RolloutBuffer : contains
 ```
 
+## Process
+
+```mermaid
+graph TD
+    A[Start Simulation] --> B[Initialize MultiAgentEnv]
+    B --> C[Create Teams and Players]
+    C --> D[Start Epoch Loop]
+    D --> E[Reset Environment]
+    E --> F[Start Round Loop]
+    F --> G[Create Player Pairings]
+    G --> H[Play Games]
+    H --> I[Update Player States and Rewards]
+    I --> J[Check for Revolutions]
+    J --> K[Update Team Scores]
+    K --> L{More Rounds?}
+    L -->|Yes| F
+    L -->|No| M[Update Agent Models]
+    M --> N[Log Epoch Data]
+    N --> O{More Epochs?}
+    O -->|Yes| D
+    O -->|No| P[End Simulation]
+    P --> Q[Generate Visualizations]
+    Q --> R[Analyze Results]
+    R --> S[End]
+
+    subgraph Epoch Process
+        D
+        E
+        F
+        G
+        H
+        I
+        J
+        K
+        L
+        M
+        N
+    end
+
+    subgraph Post-Simulation
+        Q
+        R
+    end
+```
+
 **Changelog**
 
 
